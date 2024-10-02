@@ -5,4 +5,4 @@ O problema jantar dos filósofos consiste em 5 filósofos que passam a vida pens
 Quando um filósofo pensa, ele não interage com os outros. De tempos em tempos, cada filósofo fica com fome e tenta apanhar os dois garfos que estão mais próximos (os garfos que estão ou à esquerda ou à direita). O filósofo apenas pode apanhar um garfo de cada vez, além de não pode apanhar um garfo se este estiver na mão do vizinho. Quando um filósofo esfomeado tiver 2 garfos ao mesmo tempo ele come sem largar os garfos. Apenas quando acaba de comer, o filósofo pousa os garfos na mesa, libertando-os e começa a pensar de novo.
 
 
-Créditos: https://deinfo.uepg.br/~alunoso/2021/SO/Filosofos_Java/
+Parte significativa do código obtido em:  https://deinfo.uepg.br/~alunoso/2021/SO/Filosofos_Java/
