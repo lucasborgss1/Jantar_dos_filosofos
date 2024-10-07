@@ -27,12 +27,13 @@ public class Mesa {
 			try {
 				tentativas[filosofo]++;
 				wait();
+				if (tentativas[filosofo] > 10) {
+					System.out.println("O Filósofo " + filosofo + " morreu devido a starvation.");
+				}
 			} catch (InterruptedException e) {
 			}
 		}
-		if (tentativas[filosofo] > 10) {
-			System.out.println("O Filósofo " + filosofo + " morreu devido a starvation.");
-		}
+		
 		tentativas[filosofo] = 0;
 		garfos[garfoEsquerdo(filosofo)] = false;
 		garfos[garfoDireito(filosofo)] = false;
@@ -40,6 +41,7 @@ public class Mesa {
 		imprimeEstadosFilosofos();
 		imprimeGarfos();
 		imprimeTentativas();
+		imprimeQuantidadeComidas();
 	}
 
 	public synchronized void returningGarfos(int filosofo) {
@@ -50,10 +52,6 @@ public class Mesa {
 			notifyAll();
 		}
 		filosofos[filosofo] = PENSANDO;
-		imprimeEstadosFilosofos();
-		imprimeGarfos();
-		imprimeTentativas();
-		imprimeQuantidadeComidas();
 	}
 	
 	public void imprimeQuantidadeComidas() {
